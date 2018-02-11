@@ -1,17 +1,19 @@
-/*
-Consider an array of  integers, , where all but one of the integers occur in pairs. In other words, every element in  occurs exactly twice except for one unique element.
-Given , find and print the unique element.
-*/
 #!/bin/python3
 
 import sys
+
+#XORing number with itself gives 0
+#i.e. x ^ x =0
+#so at last whatever number will not be repeated will remain as the answer.
 
 def lonelyinteger(a):
     ans=0
     for i in a:
         ans= ans^i
     return ans
+
     '''
+    Without using bit-wise operators 
     l=len(a)
     flag=False
     for i in range(0, l):
